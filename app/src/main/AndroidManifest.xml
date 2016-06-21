@@ -19,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MyOrders"
-            android:label="@string/title_activity_my_orders"
+            android:name=".Orders"
+            android:label="@string/title_activity_orders"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

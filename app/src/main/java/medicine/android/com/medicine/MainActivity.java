@@ -13,12 +13,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     ImageButton upload,list,cart;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,21 +41,27 @@ public class MainActivity extends AppCompatActivity
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Upload Prescription", Toast.LENGTH_SHORT).show();
+               Intent i = new Intent(MainActivity.this,Upload.class);
+               startActivity(i);
             }
         });
         list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"List Prescription", Toast.LENGTH_SHORT).show();
+                Intent j = new Intent(MainActivity.this,ListDown.class);
+                startActivity(j);
             }
         });
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Cart Button", Toast.LENGTH_SHORT).show();
+                Intent k = new Intent(MainActivity.this,Cart.class);
+                startActivity(k);
             }
         });
+
+
+
 
 
 
@@ -105,8 +118,11 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this,Orders.class);
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
+            Intent contact = new Intent(this, Contact.class);
+            startActivity(contact);
 
         } else if (id == R.id.nav_slideshow) {
+            Toast.makeText(getApplicationContext(),"Can't Logout right now",Toast.LENGTH_SHORT).show();
 
         }
 

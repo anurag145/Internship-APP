@@ -1,5 +1,6 @@
 package medicine.android.com.medicine;
 
+import android.content.Context;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +17,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Orders extends AppCompatActivity {
 
@@ -34,11 +42,26 @@ public class Orders extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    final static String[] values1 = new String[]{
+            "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"
+    };
+    final static String[] values2 = new String[]{
+            "20","19","18","17","16","15","14","13","12","11","10","9","8","7","6","5","4","3","2","1"
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orders);
+
+
+
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -101,16 +124,75 @@ public class Orders extends AppCompatActivity {
             return fragment;
         }
 
+
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+
             View rootView = inflater.inflate(R.layout.fragment_orders, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             if(getArguments().getInt(ARG_SECTION_NUMBER)==1)
-            textView.setText("Current");
+                {
+                    textView.setText("Current");
+                    Context mcontext=this.getContext();
+                    final ListView listView;
+                    CustomListViewAdapter customListViewAdapter;
+
+                    ArrayList<HashMap<String, String>> titleList = new ArrayList<>();
+                    for (int i=0;i<10;i++){
+                        HashMap<String,String> data = new HashMap<>();
+                        data.put("title",values1[i]);
+
+                        titleList.add(data);
+                    }
+                    listView = (ListView) rootView.findViewById(R.id.listorders);
+
+                    customListViewAdapter = new CustomListViewAdapter(mcontext,titleList);
+
+                    listView.setAdapter(customListViewAdapter);
+
+//                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+//
+//                        @Override
+//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                            int myPosition = position;
+//                            String itemClickedID = listView.getItemAtPosition(myPosition).toString();
+//                        }
+//                    });
+                    //--------------------------------------------
+                }
             else
                 if(getArguments().getInt(ARG_SECTION_NUMBER)==2)
+                {
                     textView.setText("History");
+                    Context mcontext=this.getContext();
+                    final ListView listView;
+                    CustomListViewAdapter customListViewAdapter;
+
+                    ArrayList<HashMap<String, String>> titleList = new ArrayList<>();
+                    for (int i=0;i<10;i++){
+                        HashMap<String,String> data = new HashMap<>();
+                        data.put("title",values2[i]);
+
+                        titleList.add(data);
+                    }
+                    listView = (ListView) rootView.findViewById(R.id.listorders);
+
+                    customListViewAdapter = new CustomListViewAdapter(mcontext,titleList);
+
+                    listView.setAdapter(customListViewAdapter);
+
+//                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+//
+//                        @Override
+//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                            int myPosition = position;
+//                            String itemClickedID = listView.getItemAtPosition(myPosition).toString();
+//                        }
+//                    });
+                }
+
+
             return rootView;
         }
     }

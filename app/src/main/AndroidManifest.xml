@@ -27,6 +27,42 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="medicine.android.com.medicine.MainActivity" />
         </activity>
+        <activity
+            android:name=".Contact"
+            android:label="@string/title_activity_contact"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="medicine.android.com.medicine.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Upload"
+            android:label="@string/title_activity_upload"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="medicine.android.com.medicine.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ListDown"
+            android:label="@string/title_activity_list_down"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="medicine.android.com.medicine.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Cart"
+            android:label="@string/title_activity_cart"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="medicine.android.com.medicine.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

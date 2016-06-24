@@ -43,11 +43,9 @@ public class MainActivity extends AppCompatActivity
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//               Intent i = new Intent(MainActivity.this,Upload.class);
-//               startActivity(i);
-                PopupMenu popupMenu = new PopupMenu(getApplicationContext(),v);
-                popupMenu.inflate(R.menu.main);
-                popupMenu.show();
+              Intent i = new Intent(MainActivity.this,Upload.class);
+                startActivity(i);
+
 
             }
         });

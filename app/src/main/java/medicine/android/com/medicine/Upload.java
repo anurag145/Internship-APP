@@ -17,7 +17,7 @@ public class Upload extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_upload);
         imageView=(ImageView)findViewById(R.id.imageView3);
         imageView2=(ImageView)findViewById(R.id.imageView4);
 //check if user has camera

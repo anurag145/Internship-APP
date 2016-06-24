@@ -3,6 +3,7 @@ package medicine.android.com.medicine;
 import android.content.Context;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -73,6 +74,8 @@ public class Orders extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
 
     }
 
@@ -130,10 +133,8 @@ public class Orders extends AppCompatActivity {
                                  Bundle savedInstanceState) {
 
             View rootView = inflater.inflate(R.layout.fragment_orders, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             if(getArguments().getInt(ARG_SECTION_NUMBER)==1)
                 {
-                    textView.setText("Current");
                     Context mcontext=this.getContext();
                     final ListView listView;
                     CustomListViewAdapter customListViewAdapter;
@@ -164,7 +165,6 @@ public class Orders extends AppCompatActivity {
             else
                 if(getArguments().getInt(ARG_SECTION_NUMBER)==2)
                 {
-                    textView.setText("History");
                     Context mcontext=this.getContext();
                     final ListView listView;
                     CustomListViewAdapter customListViewAdapter;
@@ -224,11 +224,9 @@ public class Orders extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Current";
                 case 1:
-                    return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
+                    return "History";
             }
             return null;
         }

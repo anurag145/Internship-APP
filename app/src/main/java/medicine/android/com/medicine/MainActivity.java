@@ -2,8 +2,10 @@ package medicine.android.com.medicine;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.PopupMenu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -41,8 +43,12 @@ public class MainActivity extends AppCompatActivity
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent i = new Intent(MainActivity.this,Upload.class);
-               startActivity(i);
+//               Intent i = new Intent(MainActivity.this,Upload.class);
+//               startActivity(i);
+                PopupMenu popupMenu = new PopupMenu(getApplicationContext(),v);
+                popupMenu.inflate(R.menu.main);
+                popupMenu.show();
+
             }
         });
         list.setOnClickListener(new View.OnClickListener() {

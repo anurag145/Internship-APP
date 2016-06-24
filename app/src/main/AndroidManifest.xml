@@ -3,29 +3,29 @@
     package="medicine.android.com.medicine">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".App">
-      <activity android:name=".SplashActivity"
-          android:label="@string/app_name"
-          android:theme="@style/SplashTheme">
-          <intent-filter>
-              <action android:name="android.intent.action.MAIN" />
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-              <category android:name="android.intent.category.LAUNCHER" />
-          </intent-filter>
-
-      </activity>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="medicine.android.com.medicine.SplashActivity"></meta-data>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="medicine.android.com.medicine.SplashActivity" />
         </activity>
         <activity
             android:name=".Orders"
@@ -72,6 +72,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="medicine.android.com.medicine.MainActivity" />
         </activity>
+        <activity android:name=".Gallery_Upload"></activity>
     </application>
 
 </manifest>

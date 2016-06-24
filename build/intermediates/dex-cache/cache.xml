@@ -12,7 +12,7 @@
         jar="C:\Users\Anurag\Desktop\Internship\medsnearyouandroidapp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.1"
-        sha1="e22092104b69f13b99a6d4b0c0199c86568e0cb5">
+        sha1="6a067598c715ccd1a3f233f822b8e33f36e5b895">
         <dex dex="C:\Users\Anurag\Desktop\Internship\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_5dcab3339861791af9d0e9a4e5f1cd730606d7a8\classes.dex" />
     </item>
     <item
@@ -33,7 +33,7 @@
         jar="C:\Users\Anurag\Desktop\Internship\medsnearyouandroidapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.1"
-        sha1="1cccb7c0d656ceb04a18ea794cef3eb01aa403a5">
+        sha1="02fa09939c1af71e071dd0ed972cd31cdbcda8f6">
         <dex dex="C:\Users\Anurag\Desktop\Internship\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_64bbc958793e836adccf1523ad0cf66b561789de\classes.dex" />
     </item>
     <item

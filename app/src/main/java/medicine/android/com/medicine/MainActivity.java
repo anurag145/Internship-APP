@@ -79,6 +79,9 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
+    public void MapsClicked(){
+        Intent q = new Intent(MainActivity.this, MapsActivity.class);
+    }
 
     @Override
     public void onBackPressed() {

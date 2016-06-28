@@ -5,17 +5,9 @@
     tools:context="MainActivity">
     <item
         android:id="@+id/item1"
-
-        android:title="item1"
+        android:showAsAction="always"
+        android:onClick="MapsClicked"
+        android:title="Maps"
          />
-    <item
-        android:id="@+id/item2"
 
-        android:title="item2"
-        />
-    <item
-        android:id="@+id/item3"
-
-        android:title="item3"
-        />
 </menu>

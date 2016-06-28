@@ -8,7 +8,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,7 +17,7 @@ public class ListDown extends AppCompatActivity {
     String string;
     ArrayList<String> data = new ArrayList<>();
     Button b;
-    String s="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,15 +32,10 @@ public class ListDown extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                string = e1.getText().toString().trim();
-                if(string.equalsIgnoreCase("")) {
-                    data.add(string);
-
-                    s = s + string + "\n";
-                    e1.setText("");
-                    e2.setText(s);
-                }else
-                    Toast.makeText(getApplication(),"Enter Medicine Name",Toast.LENGTH_LONG).show();
+                string = e1.getText().toString();
+                data.add(string);
+                e1.setText("");
+                e2.setText(data+"\n");
             }
         });
 

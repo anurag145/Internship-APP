@@ -1,6 +1,5 @@
 package medicine.android.com.medicine;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -17,9 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -27,10 +24,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener ,View.OnClickListener {
-   private ImageButton upload,list,cart;
-    private Intent intent;
-   private Dialog dialog;
+        implements NavigationView.OnNavigationItemSelectedListener {
+    ImageButton upload,list,cart;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +40,30 @@ public class MainActivity extends AppCompatActivity
         list = (ImageButton)findViewById(R.id.imageButton2);
         cart = (ImageButton) findViewById(R.id.imageButton3);
 
-        upload.setOnClickListener(this);
-        list.setOnClickListener(this);
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              Intent i = new Intent(MainActivity.this,Upload.class);
+                startActivity(i);
 
-        cart.setOnClickListener(this);
+
+            }
+        });
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent j = new Intent(MainActivity.this,ListDown.class);
+                startActivity(j);
+            }
+        });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent k = new Intent(MainActivity.this,Cart.class);
+                startActivity(k);
+            }
+        });
+
 
 
 
@@ -61,32 +78,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
-    public void dialogfucntion()
-    {
-        dialog= new Dialog(MainActivity.this);
-        dialog.setTitle("Photo Upload");
-        dialog.setContentView(R.layout.photo_dialog);
-        dialog.setCancelable(true);
-        dialog.show();
-        ImageView imageView2=(ImageView)dialog.findViewById(R.id.imageView6) ;
-        ImageView imageView=(ImageView)dialog.findViewById(R.id.imageView5);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                intent = new Intent(MainActivity.this,Upload.class);
-                startActivity(intent);
-            }
-        });
-        imageView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                intent=new Intent(MainActivity.this,Gallery_Upload.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -128,11 +119,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-             intent = new Intent(this,Orders.class);
+            Intent intent = new Intent(this,Orders.class);
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-            intent = new Intent(this, Contact.class);
-            startActivity(intent);
+            Intent contact = new Intent(this, Contact.class);
+            startActivity(contact);
 
         } else if (id == R.id.nav_slideshow) {
             Toast.makeText(getApplicationContext(),"Can't Logout right now",Toast.LENGTH_SHORT).show();
@@ -142,25 +133,5 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId())
-
-        {
-            case  R.id.imageButton :
-                dialogfucntion();
-                break;
-            case  R.id.imageButton2 :
-                 intent = new Intent(MainActivity.this,ListDown.class);
-                startActivity(intent);
-                break;
-            case  R.id.imageButton3 :
-                intent = new Intent(MainActivity.this,Cart.class);
-                startActivity(intent);
-                 break;
-            default:break;
-        }
     }
 }

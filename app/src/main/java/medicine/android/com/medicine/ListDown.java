@@ -17,7 +17,7 @@ public class ListDown extends AppCompatActivity {
     String string;
     ArrayList<String> data = new ArrayList<>();
     Button b;
-
+ String S="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +34,9 @@ public class ListDown extends AppCompatActivity {
             public void onClick(View v) {
                 string = e1.getText().toString();
                 data.add(string);
+                S=S+"\n";
                 e1.setText("");
-                e2.setText(data+"\n");
+                e2.setText(S);
             }
         });
 

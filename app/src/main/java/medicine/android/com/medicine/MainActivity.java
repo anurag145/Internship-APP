@@ -1,5 +1,6 @@
 package medicine.android.com.medicine;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -16,7 +17,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -24,8 +27,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     ImageButton upload,list,cart;
+    Button maps;
+private Intent intent;
+    private ImageView imageView;
+    private ImageView imageView1;
+    private Dialog dialog;
 
 
 
@@ -39,30 +48,16 @@ public class MainActivity extends AppCompatActivity
         upload = (ImageButton)findViewById(R.id.imageButton);
         list = (ImageButton)findViewById(R.id.imageButton2);
         cart = (ImageButton) findViewById(R.id.imageButton3);
-
-        upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-              Intent i = new Intent(MainActivity.this,Upload.class);
-                startActivity(i);
+        maps= (Button) findViewById(R.id.button2);
 
 
-            }
-        });
-        list.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent j = new Intent(MainActivity.this,ListDown.class);
-                startActivity(j);
-            }
-        });
-        cart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent k = new Intent(MainActivity.this,Cart.class);
-                startActivity(k);
-            }
-        });
+
+        upload.setOnClickListener(this);
+
+        list.setOnClickListener(this) ;
+
+        cart.setOnClickListener(this);
+        maps.setOnClickListener(this);
 
 
 
@@ -79,10 +74,33 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
-    public void MapsClicked(){
-        Intent q = new Intent(MainActivity.this, MapsActivity.class);
-    }
+    public void diagfrag()
+    {
+        dialog= new Dialog(MainActivity.this);
+        dialog.setContentView(R.layout.photo_dialog);
+        dialog.setCancelable(true);
+        dialog.show();
+        imageView =(ImageView)dialog.findViewById(R.id.imageView5);
+        imageView1=(ImageView)dialog.findViewById(R.id.imageView6);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainActivity.this,Upload.class);
+                startActivity(intent);
 
+            }
+        });
+
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainActivity.this,Gallery_Upload.class);
+                startActivity(intent);
+
+            }
+        });
+
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -136,5 +154,30 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId())
+        {
+            case R.id.imageButton :
+                diagfrag();
+                break;
+            case R.id.imageButton2 :
+                intent = new Intent(MainActivity.this,ListDown.class);
+                startActivity(intent);
+
+                break;
+            case R.id.imageButton3 :
+                intent = new Intent(MainActivity.this,Cart.class);
+                startActivity(intent);
+            case R.id.button2:
+                intent = new Intent(MainActivity.this,MapsActivity.class);
+                startActivity(intent);
+
+                break;
+            default: break;
+        }
     }
 }

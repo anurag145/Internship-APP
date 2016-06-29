@@ -5,8 +5,7 @@
     tools:context="MainActivity">
     <item
         android:id="@+id/item1"
-        android:showAsAction="always"
-        android:onClick="MapsClicked"
+        android:showAsAction="never"
         android:title="Maps"
          />
 

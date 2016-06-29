@@ -2,74 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Garg\AndroidStudioProjects\medsnearyouandroidapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.1"
-        sha1="5af6c6eea9218fedf6de69120a988e6158b4eea7">
-        <dex dex="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_730f411205637e439ec2e36c51c9d2251afeb49c\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.1"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_d1d98c22e0c4f2734a80a3b9bf70e834845f313d\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.1"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_24f27e401f15a8cedd90b1bca47d90b18db88c69\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="true"
-        revision="23.0.1"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_26bb9b6873268ae8eb7b552f363d0cb79910e5ff\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.1"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_08e58e12ed2c4f76284e1fe9e157e2e7ce3146cb\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.1"
-        sha1="205aeb745a5eb7d61b1c1d6bc7f1e771f694ec66">
-        <dex dex="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9e4d6544e33ede6679a7f9de4f74eb2cf685754e\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garg\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="true"
-        revision="23.0.1"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_a85d2bf4f7a7126e368b3d7687020b6cb1374d57\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.1"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_697244048e0ccbac4ad1adaff436ff0b41d45d1e\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.1"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_a005701ca70b9ff4f2f356ad2b52124fef3ec68c\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.1"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="C:\Users\Garg\Desktop\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_f00e9e2026be9459dbdfbcabee1cd42a2e9f2242\classes.dex" />
+        sha1="a008b6c1b12cb2930bca71dfcbf444648992e18b">
+        <dex dex="C:\Users\Garg\AndroidStudioProjects\medsnearyouandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1da3ba8bcdfd702d589eb74305af87d0f80e1da6\classes.dex" />
     </item>
 
 </items>

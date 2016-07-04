@@ -55,6 +55,8 @@
         android:id="@+id/editText2"
         android:layout_below="@+id/textView5"
         android:background="#feffff"
+        android:layout_centerHorizontal="true"
+        android:gravity="top"
         android:layout_alignLeft="@+id/textView5"/>
 
     <Button

@@ -14,6 +14,6 @@ public class App extends Application {
         super.onCreate();
 
 
-        SystemClock.sleep(TimeUnit.SECONDS.toMillis(3));
+        SystemClock.sleep(TimeUnit.SECONDS.toMillis(1));
     }
 }

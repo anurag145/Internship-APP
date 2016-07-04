@@ -7,20 +7,29 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".SplashActivity"
+            android:label="Medicine"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="medicine.android.com.medicine.SplashActivity" />
         </activity>
         <activity
             android:name=".Orders"
@@ -86,15 +95,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="medicine.android.com.medicine.MainActivity" />
         </activity>
-        <activity android:name=".Gallery_Upload"
+        <activity
+            android:name=".Gallery_Upload"
             android:label="Gallery"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="medicine.android.com.medicine.MainActivity"/>
-
+                android:value="medicine.android.com.medicine.MainActivity" />
         </activity>
+        <activity
+            android:name=".Login"
+            android:label="Medicine"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".GoogleLogin"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "448920640128",
+    "project_id": "psyched-axle-136223"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448920640128:android:8b473aebaff57f3b",
+        "android_client_info": {
+          "package_name": "medicine.android.com.medicine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448920640128-gt1248p6nrft0rpln108q2gteb77vvdv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "medicine.android.com.medicine",
+            "certificate_hash": "0CCD8150AC9465B794EFACE47D4D0166DCC2BD53"
+          }
+        },
+        {
+          "client_id": "448920640128-m608ovo6b6m38unjeai6j59rej4qe5ie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjE4PQRSj4D-rbY6MuBRV5hmSpyqAUE8Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

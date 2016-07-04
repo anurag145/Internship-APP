@@ -34,7 +34,10 @@ public class ListDown extends AppCompatActivity {
             public void onClick(View v) {
                 string = e1.getText().toString();
                 data.add(string);
-                S=S+"\n";
+              if(S.equalsIgnoreCase(""))
+                S=S+string;
+                else
+              S=S+","+string;
                 e1.setText("");
                 e2.setText(S);
             }

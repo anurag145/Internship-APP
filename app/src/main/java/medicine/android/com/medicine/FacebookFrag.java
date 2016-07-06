@@ -1,6 +1,7 @@
 package medicine.android.com.medicine;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -36,6 +37,7 @@ public class FacebookFrag extends Fragment {
             AccessToken accessToken = loginResult.getAccessToken();
             Profile profile = Profile.getCurrentProfile();
             displayMessage(profile);
+
         }
 
         @Override
@@ -105,8 +107,10 @@ public class FacebookFrag extends Fragment {
     }
 
     private void displayMessage(Profile profile){
-        if(profile != null){
+        if(profile != null) {
             textView.setText(profile.getName());
+
+
         }
     }
 

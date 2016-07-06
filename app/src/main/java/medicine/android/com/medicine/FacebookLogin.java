@@ -1,5 +1,6 @@
 package medicine.android.com.medicine;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,6 +15,7 @@ public class FacebookLogin extends AppCompatActivity {
         setContentView(R.layout.activity_facebook_login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
     }
 
     @Override

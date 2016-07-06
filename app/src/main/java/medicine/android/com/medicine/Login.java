@@ -28,6 +28,7 @@ private Button signInButton2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login);
         carouselView = (CarouselView) findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);
@@ -43,7 +44,8 @@ private Button signInButton2;
         signInButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent =new Intent(Login.this,GoogleLogin.class);
+                startActivity(intent);
             }
         });
 
@@ -52,6 +54,7 @@ private Button signInButton2;
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent =new Intent( Login.this,FacebookLogin.class);
                 startActivity(intent);
             }

@@ -172,6 +172,7 @@ private Intent intent;
             case R.id.imageButton3 :
                 intent = new Intent(MainActivity.this,Cart.class);
                 startActivity(intent);
+                break;
             case R.id.button2:
                 intent = new Intent(MainActivity.this,MapsActivity.class);
                 startActivity(intent);

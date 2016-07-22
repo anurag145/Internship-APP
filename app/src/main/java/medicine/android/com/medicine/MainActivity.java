@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -30,12 +31,13 @@ public class MainActivity extends AppCompatActivity
 
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     ImageButton upload,list,cart;
-    Button maps;
+    private int location =1;
+
 private Intent intent;
     private ImageView imageView;
     private ImageView imageView1;
     private Dialog dialog;
-
+  private TextView textView;
 
 
     @Override
@@ -48,8 +50,9 @@ private Intent intent;
         upload = (ImageButton)findViewById(R.id.imageButton);
         list = (ImageButton)findViewById(R.id.imageButton2);
         cart = (ImageButton) findViewById(R.id.imageButton3);
-        maps= (Button) findViewById(R.id.button2);
 
+
+       textView=(TextView)findViewById(R.id.textView7) ;
 
 
         upload.setOnClickListener(this);
@@ -57,7 +60,7 @@ private Intent intent;
         list.setOnClickListener(this) ;
 
         cart.setOnClickListener(this);
-        maps.setOnClickListener(this);
+
 
 
 
@@ -73,6 +76,8 @@ private Intent intent;
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        intent = new Intent(this,GetLocation.class);
+        startActivityForResult(intent,location);
     }
     public void diagfrag()
     {
@@ -173,12 +178,18 @@ private Intent intent;
                 intent = new Intent(MainActivity.this,Cart.class);
                 startActivity(intent);
                 break;
-            case R.id.button2:
-                intent = new Intent(MainActivity.this,MapsActivity.class);
-                startActivity(intent);
 
-                break;
             default: break;
         }
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+
+            if(resultCode == location){
+               textView.setText( data.getStringExtra("result"));
+            }
+
+        }
 }
+

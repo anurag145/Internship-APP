@@ -1,10 +1,9 @@
 package medicine.android.com.medicine;
 
 
-import android.app.Dialog;
+
 import android.content.Intent;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.atomic.AtomicBoolean;
+
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -16,6 +15,10 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.microsoft.windowsazure.mobileservices.*;
+
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,6 +37,7 @@ import com.synnapps.carouselview.ImageListener;
 
 public class Login extends AppCompatActivity  {
     CarouselView carouselView;
+    private int PERMISSION_CODE_1 = 23;
     int[] sampleImages = {R.mipmap.ic_launcher,R.mipmap.l,R.mipmap.m,R.mipmap.n};
     private TextView textview;
     private MobileServiceClient mClient;
@@ -51,6 +55,12 @@ private Button signInButton2;
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
+        if (Build.VERSION.SDK_INT >= 23) {
+
+            if (ActivityCompat.checkSelfPermission(Login.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+            {  requestpermisions();
+            }
+        }
 
         try {
             mClient = new MobileServiceClient(
@@ -93,12 +103,12 @@ private Button signInButton2;
                     }
                     @Override
                     public void onSuccess(MobileServiceUser user) {
-
                         cacheUserToken(mClient.getCurrentUser());
                         Intent intent = new Intent(Login.this,MainActivity.class);
 
                         startActivity(intent);
                         finish();
+
                     }
                 });
             }
@@ -118,9 +128,9 @@ private Button signInButton2;
                     }
                     @Override
                     public void onSuccess(MobileServiceUser user) {
-
                         cacheUserToken(mClient.getCurrentUser());
                         Intent intent = new Intent(Login.this,MainActivity.class);
+
                         startActivity(intent);
                         finish();
                     }
@@ -130,7 +140,10 @@ private Button signInButton2;
 
 
     }
+    public void requestpermisions() {
+        ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_CODE_1);
 
+    }
 
 
 

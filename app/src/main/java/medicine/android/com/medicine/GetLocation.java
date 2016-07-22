@@ -25,7 +25,7 @@ public class GetLocation extends AppCompatActivity {
     AddressResultReceiver mResultReceiver;
     private int location =1;
 
-    private int PERMISSION_CODE_1 = 23;
+
     public static final String PACKAGE_NAME =
             "com.github.anurag145.gettinglastlocation";
     public static final String RECEIVER = PACKAGE_NAME + ".RECEIVER";
@@ -38,27 +38,17 @@ public class GetLocation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_location);
-        if (Build.VERSION.SDK_INT >= 23) {
-
-            if ( ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.ACCESS_COARSE_LOCATION)) {
-
-                }
-
-                requestpermisions();
 
 
-            }
-        }
+
+
 
         mResultReceiver = new AddressResultReceiver(null);
         setupGoogleApiClient();
 
+
     }
-    public void requestpermisions() {
-        ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_CODE_1);
-    }
+
     GoogleApiClient.ConnectionCallbacks mConnectionCallbacks =  new GoogleApiClient.ConnectionCallbacks()
     {    @Override    public void onConnected(Bundle bundle)
     {
@@ -90,7 +80,8 @@ public class GetLocation extends AppCompatActivity {
         try { Location lastLocation = LocationServices.FusedLocationApi.
                 getLastLocation( mGoogleApiClient);
             if (lastLocation != null)
-            {  Intent intent = new Intent(this, GeocodeAddressIntentService.class);
+            {
+                Intent intent = new Intent(this, GeocodeAddressIntentService.class);
                 intent.putExtra(RECEIVER, mResultReceiver);
                 Log.d("shit",String.valueOf(
                         lastLocation.getLatitude()));
@@ -103,7 +94,7 @@ public class GetLocation extends AppCompatActivity {
 
             } else {
                 Intent returnIntent = new Intent();
-                returnIntent.putExtra("result","Location unavailable");
+                returnIntent.putExtra("result","Location unavailable ,try turning on the location service");
                 setResult(location,returnIntent);
                 finish();
             }

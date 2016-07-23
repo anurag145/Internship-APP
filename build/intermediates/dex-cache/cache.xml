@@ -1,3 +1,460 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Anurag145\.gradle\caches\modules-2\files-2.1\com.microsoft.azure\azure-mobile-services-android-sdk\2.0.3\5de03bab93697321e5654831bb98df11ad4c19ac\azure-mobile-services-android-sdk-2.0.3.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="5de03bab93697321e5654831bb98df11ad4c19ac">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\azure-mobile-services-android-sdk-2.0.3_f810b115a05dda28d7dee7da0b323fb6563eb0e8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="4e51888e12ecb17231b40116d31df4328acdd227">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_08495336b1dce555b0c70ba5b7a365935d18f42c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="fa6c324604383981fb74c4cb036d4171ed0a9a02">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-9.2.0_690f7555452d2859cb0592b89981c2a376fdca01\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="3c8fcebabb73df25937704f5566bf6c388ea941d">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.2.0_e2510187cfbcac05026d6dde27a1c40aa0139b00\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="21bb89120d84fa29afeb0f9c0ebf415bc3b45a7e">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.2.0_aaaef2f312780e257130a59644ae69f2a2d35546\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="d7572433ba21aa9e4624c819fa738b2748b82d05">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.2.0_eea94f00df6bcf7a45e98af8ca297022ce54c90a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_7a488a6204fde4e90dd4b46f00a2c277045f14ab\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="7378806b630886994099d03c369983f2848a609f">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-9.2.0_f0732c1f64535ed63350311a19fc6a4ffc857c59\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_1f969058af3dce79092251a932c4a9941ba9f0d1\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_40cf70c57089307d524a526cb1a89c60692e5e40\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="30489a97b06cc3945bdbcc1770089af9e3b3b64d">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.2.0_ecae7535c11377b65517eb8661cf9ab7880941c8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="dd7676ac12aa6653718b7ea33d93ce9d6915d526">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.2.0_fd8d414bd6f1ca6b94f2575b568e4a04bb5a103a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="fb15fd9774b5c51dcb39d8e6fa1b6f06bcd1cd34">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.2.0_cb6eb024403129a05ac44b6fdf0c66fbfcec476b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_10db0738b0da5df831d17c48ed428e6ff5d052d2\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="33203b081101ca6242a4cd746aafe5fc2dd98a34">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.2.0_83c62d814389471719277d380a3a5bb008717205\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-23.0.0_ff0d7cd72cc98ba712322458d34d3191a36614c1\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="dd7b4a8e01cafa79a0b228b2ee5bd57ae5577444">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-9.2.0_f17c0d5bb3cfe9179b852d010aff6faf2930f06e\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a0712565a784bedd07ada2393c95e0b1e288840f">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-9.2.0_19c3c3a331b5dfded484d4085846722cc3f776e0\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="593fbaec1c3e100480a2bd72457b64b7dde6ac2d">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.2.0_406cd95916ea4481b4664161f502fac76884d7f3\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="7c7c21cc7a45d5c2a57d77f4840d4d4ea3c7604f">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.2.0_947781f5817119efa8e52371e3db2dfa46f96630\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="39261f58509b1a379df041f03da394c29da05395">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.2.0_06b98fce7fce0102d5344bd9712eacfafae16cd6\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="811202a9098047576814fc2171b56b83b537a8b9">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.2.0_19cfc01acceac3ca4db13ecc36a879ecd7b486d7\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="e791f7f2fbf9ca5b3b576916533f844dfb384024">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.2.0_829e88ac5686ea1091a571862e66ab269958cf1c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a378adc3106cb3560ab3dfed05f1fda26cff5b49">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-9.2.0_465e8b918d51aa81ebe126282668ea3714bbfc17\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="dc4c18602ecffb3e69cda6cdc51ba4feac0f97d7">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.2.0_1e4fe8bb1cb0d1597553c4ee64775259dcd526d3\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a03f4d605b0f29222c2ddf8b7896258cb4b92def">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-9.2.0_89ecc1228300eeaf6ff12e3cbbea7d7f1b157219\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="20ca7888c59f63d439f218a8810c88039f8bc7db">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.2.0_1c4b7e418372e7d99029d33d760a0860ecbfe6d8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="fbb50f7f89342c915898c9376a67229e2fcee286">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.2.0_0d79a0587efad48a37e4434d9e6d211eb865f654\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="299e04800d1169b9f3dd04c376c7b266a3594cca">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.2.0_9c22622bc619b82b8b3a5e16cbab1f02553f4f81\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="44120508d7240c3e34a05957981a5c3c9b9f61aa">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.2.0_c24b05ec22dfc94bdcd85303aca34f304975baef\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a08d1fa2d2ee836864e7780a182743ea29d0f23c">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6b278f480648cd038275283815fb60b9ac11ad0d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="08cdd337d1d9247eb915f0ab365624dd7966e7fa">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.2.0_079dda4c57c20e90850fde22c63afa7867388f65\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="4838df6db988160b107e954e02a745370df543b6">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.2.0_717d77811f83ac1b70b6ee53141559e55d0a17a8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="18e52280643effbab30370b073e456d670a0db54">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.2.0_77d5972c616272f27e1d51abded019ac4c56ee88\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="163b095362fd14d682ac311bf672c2fb54de5078">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.2.0_a6df876007b9725c20dbca40d0a78da8976d0039\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="e91e1f335dc418d0138991a1d5155f0490ab6082">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.2.0_6972c32a6bd194cd522fdca5b045362617f916ac\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="be009dbe07b3a252c8cda07fc948ac713d2f5171">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.2.0_e95795a60ce2e7ed20cdac91924a8fd4e0149efe\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="1dc44c4798cbd79e95e4838a3fdc734c0e3f895f">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-9.2.0_6e9d4822acade1cd49986cf309bab48cd87ccab7\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="982031d2aa9652bc955d0b581ec70378c0adfc56">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.2.0_00541d7a73e2c859794258727a4ce726759255e3\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="ce9432b50a02be101bc491a1b38d3904200bd988">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.2.0_4e5ec02f5c534381035aa7e94de418c303246950\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="b53d61bae49278c0fa202d9066d2e72fc151c1e8">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-9.2.0_85dc246ecb2ae47fb90adf9141cc2fc53e2d9dd8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="74694bf98bd1f856cf478bd0c516531801badced">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.2.0_df57e5c634b29716dd34d356e34021b00b738b9a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="8ec9ae00d45e758ac5b7a1c5dc0daa8a4b24280f">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-places-9.2.0_b611fa6d70cf67e4ac4f99579ea883fc7d6ac165\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.synnapps\carouselview\0.0.9\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="ebac93e92df3136161ff1ac7b0595ca32a9e4b97">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.synnapps-carouselview-0.0.9_d94cf312bb1b48ef9c096eacedc558bd3ebc15c8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_ad60ab808e46aeabc9a16647fb18a8d0c91bb527\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="f315c6b5b99081f16a79c9aaa557328a4644fe63">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.2.0_97bc781193c56e7598342c32744b5f60dbf41635\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3_0026dc866a94b39dfde29b7c1c86e38b14f3e1a0\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="7428f0d1debdcf1b5792a26146e51a38d992d04d">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.2.0_233f9aafc5b95e90c59b941552599c77d5cc4cf8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="404f4108b41050173f93836f5b35efdd9525a0ad">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-9.2.0_e3874a309d5a751a8a48a0f97a48d03b77ace12b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_25d3294f6086ccc17a2f408bb0b53d446b435ae4\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="5acfd484717d9175c175569a114d46dbeec074ed">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.2.0_187b2ea1a4859357b0bc3a8de988af472a4c9557\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="e3f200938bb888d83c2da807cb6aee983baae254">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.2.0_7de0af414d3678cc0010cca0bf719c94961e447f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="363f626ad5686283250cdb6073ae1bba5cb07a87">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.2.0_e5542e5f8474a5029acd022dcc22fc23f0a7f573\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_e735c94e163d1bf319e3ce99aea42304fa592fb3\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_a6c83e0891178c22effdfc40bb81375af13dbef9\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="f56a68df45e18ce77814db6553fdaa229308f49b">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.2.0_51edc58a929a6a97ba61fb0e70b17306606fbc87\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="0595e77431edaba6793410f9bfa3603c063c58e7">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-9.2.0_f1dc04499cb1d9fb4231af97117ab4dc4748db68\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="7c39a4b431976abc46d3cf6344c75d06c769cd35">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.2.0_a13fc8c71e4affc839d1a1f0521ba422109f536e\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-contextmanager\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="8ad1b5663f367dac619256d75fb08a98c7baa4f4">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-contextmanager-9.2.0_ad2fe79d32631cf8e31fc8ca6fbe09094a2cb92b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="535d4497b5fa5d451e07a043e9e220d5c25ab7c7">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.2.0_61107de2d926938d7edfc73317c8f34f0905b219\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\18.0\cce0823396aa693798f8882e64213b1772032b09\guava-18.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\guava-18.0_7338468ee4694cadc6c9fb2c39205a440b4a7e7b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a06eb7761fca120bbb46b34b930a3a3462ba9d7f">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.2.0_6bfe6b046dc98347eefbaa828cd737f73a968b4c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_b67b11d8fdc6aade6fba442457e3204956f46e3d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="33b5900f82d19fd3dacee518363b249ace77b8f5">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.2.0_3ac4ab2c38274b833a814978ed62f9c076f98ddb\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Anurag145\Desktop\2kiloandroidapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_68ce26b41efcc75a2b9a7b6093c3b30a19c9830c\classes.dex" />
+    </item>
+
+</items>

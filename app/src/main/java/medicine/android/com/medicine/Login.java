@@ -26,7 +26,7 @@ import android.view.View;
 
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
+
 
 
 import com.synnapps.carouselview.CarouselView;
@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity  {
     CarouselView carouselView;
     private int PERMISSION_CODE_1 = 23;
     int[] sampleImages = {R.mipmap.ic_launcher,R.mipmap.l,R.mipmap.m,R.mipmap.n};
-    private TextView textview;
+
     private MobileServiceClient mClient;
     private Button signInButton;
 private Button signInButton2;
@@ -86,7 +86,7 @@ private Button signInButton2;
 
 
         carouselView.setImageListener(imageListener);
-         textview=(TextView)findViewById(R.id.textView6);
+
         //Initializing signinbutton
         signInButton = (Button) findViewById(R.id.sign_in_button_facebook);
         signInButton2=(Button)findViewById(R.id.sign_in_button_google);

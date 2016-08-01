@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="medicine.android.com.medicine">
 
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -68,16 +67,6 @@
                 android:value="medicine.android.com.medicine.MainActivity" />
         </activity>
         <activity
-            android:name=".Cart"
-            android:label="@string/title_activity_cart"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="medicine.android.com.medicine.MainActivity" />
-        </activity>
-
-        <activity
             android:name=".Gallery_Upload"
             android:label="Gallery"
             android:parentActivityName=".MainActivity"
@@ -90,10 +79,30 @@
             android:name=".Login"
             android:label="Medicine"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".GetLocation"></activity>
+        <activity android:name=".GetLocation" />
+
         <service
             android:name=".GeocodeAddressIntentService"
-            android:exported="false"/>
+            android:exported="false" />
+
+        <activity
+            android:name=".Cart"
+            android:label="@string/title_activity_cart"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="medicine.android.com.medicine.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Checkout"
+            android:label="@string/title_activity_checkout"
+            android:parentActivityName=".Cart"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="medicine.android.com.medicine.Cart" />
+        </activity>
     </application>
 
 </manifest>

@@ -18,7 +18,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -134,7 +136,7 @@ public class Orders extends AppCompatActivity {
                 {
                     Context mcontext=this.getContext();
                     final ListView listView;
-                    CustomListViewAdapter customListViewAdapter;
+                    CustomListViewOrders customListViewAdapter;
 
                     ArrayList<HashMap<String, String>> titleList = new ArrayList<>();
                     for (int i=0;i<10;i++){
@@ -145,18 +147,20 @@ public class Orders extends AppCompatActivity {
                     }
                     listView = (ListView) rootView.findViewById(R.id.listorders);
 
-                    customListViewAdapter = new CustomListViewAdapter(mcontext,titleList);
+                    customListViewAdapter = new CustomListViewOrders(mcontext,titleList);
 
                     listView.setAdapter(customListViewAdapter);
 
-//                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-//
-//                        @Override
-//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                            int myPosition = position;
-//                            String itemClickedID = listView.getItemAtPosition(myPosition).toString();
-//                        }
-//                    });
+                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            int myPosition = position;
+                            Context mContext = getContext();
+                            String itemClickedID = listView.getItemAtPosition(myPosition).toString();
+                            Toast.makeText(mContext,itemClickedID,Toast.LENGTH_SHORT).show();
+                        }
+                    });
                     //--------------------------------------------
                 }
             else
@@ -164,7 +168,7 @@ public class Orders extends AppCompatActivity {
                 {
                     Context mcontext=this.getContext();
                     final ListView listView;
-                    CustomListViewAdapter customListViewAdapter;
+                    CustomListViewOrders customListViewAdapter;
 
                     ArrayList<HashMap<String, String>> titleList = new ArrayList<>();
                     for (int i=0;i<10;i++){
@@ -175,18 +179,20 @@ public class Orders extends AppCompatActivity {
                     }
                     listView = (ListView) rootView.findViewById(R.id.listorders);
 
-                    customListViewAdapter = new CustomListViewAdapter(mcontext,titleList);
+                    customListViewAdapter = new CustomListViewOrders(mcontext,titleList);
 
                     listView.setAdapter(customListViewAdapter);
 
-//                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-//
-//                        @Override
-//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                            int myPosition = position;
-//                            String itemClickedID = listView.getItemAtPosition(myPosition).toString();
-//                        }
-//                    });
+                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            int myPosition = position;
+                            Context mContext = getContext();
+                            String itemClickedID = listView.getItemAtPosition(myPosition).toString();
+                            Toast.makeText(mContext,itemClickedID,Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
 
 

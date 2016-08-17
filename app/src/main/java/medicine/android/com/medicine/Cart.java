@@ -47,7 +47,7 @@ public class Cart extends AppCompatActivity {
 
             titleList.add(data);
         }
-        listView = (ListView) findViewById(R.id.listorders);
+        listView = (ListView) findViewById(R.id.listy);
 
         customListViewAdapter = new CustomListViewAdapter(getApplicationContext(),titleList);
 
@@ -62,11 +62,6 @@ public class Cart extends AppCompatActivity {
         startActivity(i);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_cart, menu);
-        return true;
-    }
+
 
 }

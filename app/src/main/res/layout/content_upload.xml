@@ -18,7 +18,6 @@
         android:layout_height="50dp"
         android:src="@mipmap/ic_launcher"
         android:id="@+id/imageView3"
-        android:onClick="launchCamera"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="61dp" />

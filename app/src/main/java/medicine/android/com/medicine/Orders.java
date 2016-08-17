@@ -1,7 +1,10 @@
 package medicine.android.com.medicine;
 
+import android.app.Dialog;
 import android.content.Context;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -11,6 +14,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,14 +23,26 @@ import android.view.ViewGroup;
 
 
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.activeandroid.query.Select;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 
 public class Orders extends AppCompatActivity {
+private static List<IMAGE2> list;
+    private static List<IMAGE> listy;
+    static SimpleDateFormat dateformat ;
+   static Calendar c;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -42,11 +58,11 @@ public class Orders extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
-    final static String[] values1 = new String[]{
-            "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"
+     static String[] values1 = new String[]{
+            "NO VALUE"
     };
-    final static String[] values2 = new String[]{
-            "20","19","18","17","16","15","14","13","12","11","10","9","8","7","6","5","4","3","2","1"
+     static String[] values2 = new String[]{
+            "NO VALUE"
     };
 
 
@@ -66,6 +82,8 @@ public class Orders extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+   dateformat = new SimpleDateFormat("MM.dd.yyyy", Locale.getDefault());
+         c= Calendar.getInstance();
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -125,7 +143,56 @@ public class Orders extends AppCompatActivity {
             fragment.setArguments(args);
             return fragment;
         }
+        public  void valuefind()
+        {
 
+
+            list=get();
+            if(!list.isEmpty())
+            {
+                values1= new String[list.size()];
+                for (int i = 0; i < list.size(); i++) {
+
+                    values1[i]= list.get(i).date;
+
+
+                }
+            }
+
+
+
+        }
+        public  void valuefind2()
+        {
+
+
+            listy=get1();
+            if(!listy.isEmpty())
+            {
+
+
+                values2= new String[listy.size()];
+                for (int i = 0; i < listy.size(); i++) {
+
+                        values2[i] = listy.get(i).date;
+
+                }
+                }
+            }
+
+
+
+
+
+        static List<IMAGE> get1()
+        {
+            return  new Select().from(IMAGE.class).execute();
+        }
+
+        static List<IMAGE2> get()
+        {
+            return  new Select().from(IMAGE2.class).execute();
+        }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -139,8 +206,11 @@ public class Orders extends AppCompatActivity {
                     CustomListViewOrders customListViewAdapter;
 
                     ArrayList<HashMap<String, String>> titleList = new ArrayList<>();
-                    for (int i=0;i<10;i++){
+                    valuefind();
+
+                    for (int i=0;i<values1.length;i++){
                         HashMap<String,String> data = new HashMap<>();
+
                         data.put("title",values1[i]);
 
                         titleList.add(data);
@@ -155,10 +225,19 @@ public class Orders extends AppCompatActivity {
 
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            int myPosition = position;
-                            Context mContext = getContext();
-                            String itemClickedID = listView.getItemAtPosition(myPosition).toString();
-                            Toast.makeText(mContext,itemClickedID,Toast.LENGTH_SHORT).show();
+                            byte[] decodedString = Base64.decode(list.get(position).image, Base64.DEFAULT);
+                            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                            Dialog dialog;
+                            dialog= new Dialog(getContext());
+                            dialog.setContentView(R.layout.photo_dialog);
+                            dialog.setCancelable(true);
+
+                             ImageView imageView =(ImageView)dialog.findViewById(R.id.imageView5);
+
+                            ImageView imageView2 =(ImageView)dialog.findViewById(R.id.imageView6);
+                           imageView.setVisibility(View.INVISIBLE);
+                            imageView2.setImageBitmap(decodedByte);
+                            dialog.show();
                         }
                     });
                     //--------------------------------------------
@@ -171,7 +250,10 @@ public class Orders extends AppCompatActivity {
                     CustomListViewOrders customListViewAdapter;
 
                     ArrayList<HashMap<String, String>> titleList = new ArrayList<>();
-                    for (int i=0;i<10;i++){
+                    valuefind2();
+
+                    for (int i=0;i<values2.length;i++){
+
                         HashMap<String,String> data = new HashMap<>();
                         data.put("title",values2[i]);
 
@@ -187,10 +269,21 @@ public class Orders extends AppCompatActivity {
 
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            int myPosition = position;
-                            Context mContext = getContext();
-                            String itemClickedID = listView.getItemAtPosition(myPosition).toString();
-                            Toast.makeText(mContext,itemClickedID,Toast.LENGTH_SHORT).show();
+
+                            Dialog dialog;
+                            dialog= new Dialog(getContext());
+                            dialog.setContentView(R.layout.photo_dialog);
+                            dialog.setCancelable(true);
+
+                            ImageView imageView =(ImageView)dialog.findViewById(R.id.imageView5);
+
+                            ImageView imageView2 =(ImageView)dialog.findViewById(R.id.imageView6);
+                            imageView.setVisibility(View.INVISIBLE);
+                            imageView2.setVisibility(View.INVISIBLE);
+                            TextView textView=(TextView)dialog.findViewById(R.id.texty);
+                            textView.setText(listy.get(position).list);
+                            textView.setVisibility(View.VISIBLE);
+                            dialog.show();
                         }
                     });
                 }
@@ -227,9 +320,9 @@ public class Orders extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Current";
+                    return "Image";
                 case 1:
-                    return "History";
+                    return "Text";
             }
             return null;
         }

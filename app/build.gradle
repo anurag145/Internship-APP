@@ -37,6 +37,7 @@ dependencies {
     compile 'com.google.android.gms:play-services:9.2.0'
     compile 'com.microsoft.azure:azure-mobile-services-android-sdk:2.0.3'
     compile 'com.synnapps:carouselview:0.0.9'
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
 
 
     }

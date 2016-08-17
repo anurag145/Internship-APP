@@ -1,5 +1,7 @@
 package medicine.android.com.medicine;
 
+
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -8,8 +10,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class ListDown extends AppCompatActivity {
 
@@ -17,7 +23,9 @@ public class ListDown extends AppCompatActivity {
     String string;
     ArrayList<String> data = new ArrayList<>();
     Bundle checkout = new Bundle();
-    Button b,a,c;
+    Button b,a;
+    SimpleDateFormat dateformat;
+    private Calendar c ;
  String S="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +38,7 @@ public class ListDown extends AppCompatActivity {
         e2 = (EditText) findViewById(R.id.editText2);
         b = (Button) findViewById(R.id.button);
         a = (Button) findViewById(R.id.button2);
-        c = (Button) findViewById(R.id.button3);
+
         b.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -46,15 +54,25 @@ public class ListDown extends AppCompatActivity {
                 checkout.putString("listdown",S);
             }
         });
-        c.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent change = new Intent(ListDown.this,Cart.class);
-                change.putExtra("listdown",checkout);
-                startActivity(change);
-            }
-        });
 
+           a.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   if (!e2.getText().toString().equalsIgnoreCase(""))
+                   {  dateformat = new SimpleDateFormat("MM.dd.yyyy", Locale.getDefault());
+                       c= Calendar.getInstance();
+                       IMAGE ob = new IMAGE();
+                       ob.date=dateformat.format(c.getTime()).toUpperCase();
+                       ob.list=e2.getText().toString();
+
+                       ob.save();
+
+                       finish();
+                   }
+                   else
+                       Toast.makeText(getApplicationContext(),"LIST EMPTY",Toast.LENGTH_LONG).show();
+               }
+           });
 
 
 

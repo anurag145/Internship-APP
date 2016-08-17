@@ -21,6 +21,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.activeandroid.query.Select;
+
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     ImageButton upload,list,cart;
     private int location =1;
-
+private ImageView im;
 private Intent intent;
     private ImageView imageView;
     private ImageView imageView1;
@@ -46,7 +49,7 @@ private Intent intent;
         upload = (ImageButton)findViewById(R.id.imageButton);
         list = (ImageButton)findViewById(R.id.imageButton2);
         cart = (ImageButton) findViewById(R.id.imageButton3);
-
+             im =(ImageView)findViewById(R.id.imageView2);
 
        textView=(TextView)findViewById(R.id.textView7) ;
 
@@ -90,6 +93,7 @@ private Intent intent;
             public void onClick(View v) {
                 intent = new Intent(MainActivity.this,Upload.class);
                 startActivity(intent);
+
 
             }
         });

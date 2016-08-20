@@ -16,6 +16,9 @@ public class IMAGE extends Model {
     @Column(name="date")
     public  String date;
 
+    @Column(name="stored")
+    public  int stored;
+
     @Column(name ="list")
     public String list;
 

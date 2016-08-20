@@ -64,7 +64,7 @@ public class ListDown extends AppCompatActivity {
                        IMAGE ob = new IMAGE();
                        ob.date=dateformat.format(c.getTime()).toUpperCase();
                        ob.list=e2.getText().toString();
-
+                       ob.stored=1;
                        ob.save();
 
                        finish();

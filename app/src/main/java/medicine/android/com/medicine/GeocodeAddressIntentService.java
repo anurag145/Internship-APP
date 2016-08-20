@@ -82,7 +82,7 @@ public class GeocodeAddressIntentService extends IntentService {
             Address address = addresses.get(0);
             ArrayList<String> addressFragments = new ArrayList<>();
 
-            for(int i = 1; i < address.getMaxAddressLineIndex()-1; i++) {
+            for(int i = 0; i < address.getMaxAddressLineIndex(); i++) {
                 addressFragments.add(address.getAddressLine(i));
             }
             Log.i(TAG, "Address Found");

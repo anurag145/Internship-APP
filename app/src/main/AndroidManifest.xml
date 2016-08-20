@@ -16,17 +16,17 @@
             android:name=".SplashActivity"
             android:label="Medicine"
             android:theme="@style/SplashTheme">
-
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="medicine.android.com.medicine.SplashActivity" />
@@ -34,6 +34,15 @@
         <activity
             android:name=".Orders"
             android:label="@string/title_activity_orders"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="medicine.android.com.medicine.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Cart"
+            android:label="CART"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -86,24 +95,6 @@
             android:name=".GeocodeAddressIntentService"
             android:exported="false" />
 
-        <activity
-            android:name=".Cart"
-            android:label="@string/title_activity_cart"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="medicine.android.com.medicine.MainActivity" />
-        </activity>
-        <activity
-            android:name=".Checkout"
-            android:label="@string/title_activity_checkout"
-            android:parentActivityName=".Cart"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="medicine.android.com.medicine.Cart" />
-        </activity>
         <meta-data
             android:name="AA_MODELS"
             android:value="medicine.android.com.medicine.IMAGE,medicine.android.com.medicine.IMAGE2" />

@@ -145,39 +145,40 @@ private static List<IMAGE2> list;
         }
         public  void valuefind()
         {
-
+            String yo[]={"NO VALUE"};
 
             list=get();
             if(!list.isEmpty())
             {
-                values1= new String[list.size()];
+                yo= new String[list.size()];
                 for (int i = 0; i < list.size(); i++) {
 
-                    values1[i]= list.get(i).date;
+                    yo[i]= list.get(i).date;
 
 
                 }
             }
-
+         values1=yo;
 
 
         }
         public  void valuefind2()
         {
-
+            String yo[]={"NO VALUE"};
 
             listy=get1();
             if(!listy.isEmpty())
             {
 
+                 yo=new String[listy.size()];
 
-                values2= new String[listy.size()];
                 for (int i = 0; i < listy.size(); i++) {
 
-                        values2[i] = listy.get(i).date;
+                        yo[i] = listy.get(i).date;
 
                 }
                 }
+            values2=yo;
             }
 
 
@@ -186,12 +187,12 @@ private static List<IMAGE2> list;
 
         static List<IMAGE> get1()
         {
-            return  new Select().from(IMAGE.class).execute();
+            return  new Select().from(IMAGE.class).where("stored=?",2).execute();
         }
 
         static List<IMAGE2> get()
         {
-            return  new Select().from(IMAGE2.class).execute();
+            return  new Select().from(IMAGE2.class).where("stored=?",2).execute();
         }
 
         @Override
@@ -229,13 +230,12 @@ private static List<IMAGE2> list;
                             Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
                             Dialog dialog;
                             dialog= new Dialog(getContext());
-                            dialog.setContentView(R.layout.photo_dialog);
+                            dialog.setContentView(R.layout.photo_dialog1);
                             dialog.setCancelable(true);
 
-                             ImageView imageView =(ImageView)dialog.findViewById(R.id.imageView5);
 
                             ImageView imageView2 =(ImageView)dialog.findViewById(R.id.imageView6);
-                           imageView.setVisibility(View.INVISIBLE);
+
                             imageView2.setImageBitmap(decodedByte);
                             dialog.show();
                         }

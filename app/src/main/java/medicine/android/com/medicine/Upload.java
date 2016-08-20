@@ -51,7 +51,7 @@ public class Upload extends AppCompatActivity {
                 photo.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
                 byte[] byteArray = byteArrayOutputStream .toByteArray();
                 ob.image=Base64.encodeToString(byteArray, Base64.DEFAULT);
-
+                ob.stored=1;
                 ob.save();
                 finish();
             }

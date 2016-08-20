@@ -23,7 +23,7 @@ public class Upload extends AppCompatActivity {
     private ImageView imageView2;
     private ImageView imageView;
     SimpleDateFormat dateformat;
-
+  View view;
     Bitmap photo;
 
     private Calendar c ;
@@ -35,6 +35,7 @@ public class Upload extends AppCompatActivity {
         imageView=(ImageView)findViewById(R.id.imageView3);
         imageView2=(ImageView)findViewById(R.id.imageView4);
         imageView.setEnabled(false);
+
 //check if user has camera
         if(hasCamera())
            launchCamera(findViewById(R.id.camera));

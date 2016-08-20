@@ -48,7 +48,7 @@ private Intent intent;
 
         upload = (ImageButton)findViewById(R.id.imageButton);
         list = (ImageButton)findViewById(R.id.imageButton2);
-        cart = (ImageButton) findViewById(R.id.imageButton3);
+
              im =(ImageView)findViewById(R.id.imageView2);
 
        textView=(TextView)findViewById(R.id.textView7) ;
@@ -58,7 +58,7 @@ private Intent intent;
 
         list.setOnClickListener(this) ;
 
-        cart.setOnClickListener(this);
+
 
 
 
@@ -75,9 +75,12 @@ private Intent intent;
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        intent = new Intent(this,GetLocation.class);
-        startActivityForResult(intent,location);
+        if(LOC.send().equalsIgnoreCase("Your Location should appear here."))
+        {
+            intent = new Intent(this, GetLocation.class);
+            startActivityForResult(intent, location);
+        }else
+          textView.setText(LOC.send());
     }
 
     public void diagfrag()
@@ -136,6 +139,13 @@ private Intent intent;
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id==R.id.cart)
+        {
+            intent= new Intent(this,Cart.class);
+            startActivity(intent);
+
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -176,10 +186,7 @@ private Intent intent;
                 startActivity(intent);
 
                 break;
-            case R.id.imageButton3 :
-                intent = new Intent(MainActivity.this,Cart.class);
-                startActivity(intent);
-                break;
+
 
             default: break;
         }
@@ -189,7 +196,9 @@ private Intent intent;
 
 
             if(resultCode == location){
-               textView.setText( data.getStringExtra("result"));
+               LOC.get(data.getStringExtra("result"));
+                Toast.makeText(getApplicationContext(),LOC.send(),Toast.LENGTH_LONG).show();
+                textView.setText( LOC.send());
             }
 
         }

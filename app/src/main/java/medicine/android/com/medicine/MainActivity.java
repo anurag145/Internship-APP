@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -33,6 +34,10 @@ public class MainActivity extends AppCompatActivity
     private int location =1;
 private ImageView im;
 private Intent intent;
+    private CardView cardView;
+    private CardView cardView2;
+    private CardView cardView3;
+    private CardView cardView4;
     private ImageView imageView;
     private ImageView imageView1;
     private Dialog dialog;
@@ -46,17 +51,17 @@ private Intent intent;
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        upload = (ImageButton)findViewById(R.id.imageButton);
-        list = (ImageButton)findViewById(R.id.imageButton2);
+        cardView = (CardView)findViewById(R.id.cardview);
+        cardView2 = (CardView) findViewById(R.id.cardview2);
 
-             im =(ImageView)findViewById(R.id.imageView2);
+
 
        textView=(TextView)findViewById(R.id.textView7) ;
 
 
-        upload.setOnClickListener(this);
+        cardView.setOnClickListener(this);
 
-        list.setOnClickListener(this) ;
+        cardView2.setOnClickListener(this) ;
 
 
 
@@ -178,10 +183,10 @@ private Intent intent;
 
         switch (v.getId())
         {
-            case R.id.imageButton :
+            case R.id.cardview :
                 diagfrag();
                 break;
-            case R.id.imageButton2 :
+            case R.id.cardview2 :
                 intent = new Intent(MainActivity.this,ListDown.class);
                 startActivity(intent);
 

@@ -93,7 +93,7 @@ private Button signInButton2;
 
         signInButton2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+              public void onClick(View view) {
                 ListenableFuture<MobileServiceUser> mLogin = mClient.login(MobileServiceAuthenticationProvider.Google);
 
                 Futures.addCallback(mLogin, new FutureCallback<MobileServiceUser>() {
@@ -104,6 +104,7 @@ private Button signInButton2;
                     @Override
                     public void onSuccess(MobileServiceUser user) {
                         cacheUserToken(mClient.getCurrentUser());
+
                         Intent intent = new Intent(Login.this,MainActivity.class);
 
                         startActivity(intent);

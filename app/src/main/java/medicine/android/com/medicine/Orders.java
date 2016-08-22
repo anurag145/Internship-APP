@@ -275,9 +275,9 @@ private static List<IMAGE2> list;
                             dialog.setContentView(R.layout.photo_dialog);
                             dialog.setCancelable(true);
 
-                            ImageView imageView =(ImageView)dialog.findViewById(R.id.imageView5);
+                            TextView imageView =(TextView) dialog.findViewById(R.id.textem);
 
-                            ImageView imageView2 =(ImageView)dialog.findViewById(R.id.imageView6);
+                            TextView imageView2 =(TextView)dialog.findViewById(R.id.texter);
                             imageView.setVisibility(View.INVISIBLE);
                             imageView2.setVisibility(View.INVISIBLE);
                             TextView textView=(TextView)dialog.findViewById(R.id.texty);

@@ -7,13 +7,12 @@ public class LOC
 {
     private static LOC singleton = new LOC( );
   private static String loc="Your Location should appear here.";
+    private static String loc1="Your Location should appear here.";
 
     private LOC(){ }
 
 
-    public static LOC getInstance( ) {
-        return singleton;
-    }
+
 
     protected static void get(String tmp ) {
         loc=tmp;
@@ -22,4 +21,12 @@ public class LOC
     {
         return loc;
     }
+    protected static void get1(String tmp ) {
+        loc1=tmp;
+    }
+    protected static String send1()
+    {
+        return loc1;
+    }
 }
+

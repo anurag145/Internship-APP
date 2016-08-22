@@ -83,7 +83,8 @@ public class Upload extends AppCompatActivity {
             imageView2.setImageBitmap(photo);
 
 
-        }
+        }else
+            finish();
 
 
     }

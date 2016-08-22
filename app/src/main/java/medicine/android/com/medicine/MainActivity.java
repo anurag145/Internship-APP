@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.ToolbarWidgetWrapper;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -30,7 +31,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
 
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
-    ImageButton upload,list,cart;
+
     private int location =1;
 private ImageView im;
 private Intent intent;
@@ -38,8 +39,8 @@ private Intent intent;
     private CardView cardView2;
     private CardView cardView3;
     private CardView cardView4;
-    private ImageView imageView;
-    private ImageView imageView1;
+    private TextView tx;
+    private TextView tx2;
     private Dialog dialog;
   private TextView textView;
 
@@ -94,23 +95,24 @@ private Intent intent;
         dialog.setContentView(R.layout.photo_dialog);
         dialog.setCancelable(true);
         dialog.show();
-        imageView =(ImageView)dialog.findViewById(R.id.imageView5);
-        imageView1=(ImageView)dialog.findViewById(R.id.imageView6);
-        imageView.setOnClickListener(new View.OnClickListener() {
+        tx =(TextView) dialog.findViewById(R.id.texter);
+        tx2=(TextView)dialog.findViewById(R.id.textem);
+        tx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intent = new Intent(MainActivity.this,Upload.class);
                 startActivity(intent);
-
+                 dialog.dismiss();
 
             }
         });
 
-        imageView1.setOnClickListener(new View.OnClickListener() {
+        tx2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intent = new Intent(MainActivity.this,Gallery_Upload.class);
                 startActivity(intent);
+                dialog.dismiss();
 
             }
         });
@@ -202,7 +204,8 @@ private Intent intent;
 
             if(resultCode == location){
                LOC.get(data.getStringExtra("result"));
-                Toast.makeText(getApplicationContext(),LOC.send(),Toast.LENGTH_LONG).show();
+
+
                 textView.setText( LOC.send());
             }
 

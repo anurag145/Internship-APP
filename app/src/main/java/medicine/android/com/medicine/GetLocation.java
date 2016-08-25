@@ -4,16 +4,12 @@ import android.content.Intent;
 
 
 import android.location.Location;
-
 import android.os.Handler;
 import android.os.ResultReceiver;
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
 import android.widget.Toast;
-
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
@@ -36,11 +32,6 @@ public class GetLocation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_location);
-
-
-
-
-
         mResultReceiver = new AddressResultReceiver(null);
         setupGoogleApiClient();
 

@@ -12,8 +12,9 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -45,25 +46,31 @@ import java.util.Locale;
 
 public class Orders extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 private static List<IMAGE2> list;
+    static RecyclerView mRecyclerView;
     private static List<IMAGE> listy;
     static SimpleDateFormat dateformat ;
+    protected static CustomAdapter mAdapter;
    static Calendar c;
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
+    private static final int SPAN_COUNT = 2;
+    private enum LayoutManagerType {
+        GRID_LAYOUT_MANAGER
+    }
+    protected static   LayoutManagerType mCurrentLayoutManagerType;
+    protected static RecyclerView.LayoutManager mLayoutManager;
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
+    private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
      static String[] values1 = new String[]{
+            "NO VALUE"
+    };
+    static String[] values3 = new String[]{
+            "NO VALUE"
+    };
+    static String[] values4 = new String[]{
+            "NO VALUE"
+    };
+    static String[] values5= new String[]{
             "NO VALUE"
     };
      static String[] values2 = new String[]{
@@ -190,20 +197,26 @@ private static List<IMAGE2> list;
         }
         public  void valuefind()
         {
-            String yo[]={"NO VALUE"};
+
 
             list=get();
             if(!list.isEmpty())
             {
-                yo= new String[list.size()];
+                values1= new String[list.size()];
+                values3= new String[list.size()];
+                values4= new String[list.size()];
+                values5= new String[list.size()];
                 for (int i = 0; i < list.size(); i++) {
 
-                    yo[i]= list.get(i).date;
+                    values1[i]= list.get(i).date;
+                    values3[i]= list.get(i).time;
+                    values4[i]= "Delivery";
+                    values5[i]= list.get(i).image;
 
 
                 }
             }
-         values1=yo;
+
 
 
         }
@@ -230,6 +243,7 @@ private static List<IMAGE2> list;
 
 
 
+
         static List<IMAGE> get1()
         {
             return  new Select().from(IMAGE.class).where("stored=?",2).execute();
@@ -249,21 +263,26 @@ private static List<IMAGE2> list;
                 {
                     Context mcontext=this.getContext();
                     final ListView listView;
-                    CustomListViewOrders customListViewAdapter;
-
-                    ArrayList<HashMap<String, String>> titleList = new ArrayList<>();
                     valuefind();
 
-                    for (int i=0;i<values1.length;i++){
-                        HashMap<String,String> data = new HashMap<>();
-
-                        data.put("title",values1[i]);
-
-                        titleList.add(data);
-                    }
+                    mRecyclerView=(RecyclerView)rootView.findViewById(R.id.recyclerView);
+                    mLayoutManager = new GridLayoutManager(getActivity(), SPAN_COUNT);
                     listView = (ListView) rootView.findViewById(R.id.listorders);
+                    listView.setVisibility(View.GONE);
+                    mCurrentLayoutManagerType = LayoutManagerType.GRID_LAYOUT_MANAGER;
+                    int scrollPosition = 0;
+                    if (mRecyclerView.getLayoutManager() != null) {
+                        scrollPosition = ((GridLayoutManager) mRecyclerView.getLayoutManager())
+                                .findFirstCompletelyVisibleItemPosition();
+                    }
+                    mLayoutManager = new GridLayoutManager(getActivity(), SPAN_COUNT);
+                    mCurrentLayoutManagerType = LayoutManagerType.GRID_LAYOUT_MANAGER;
+                    mRecyclerView.setLayoutManager(mLayoutManager);
+                    mRecyclerView.scrollToPosition(scrollPosition);
+                    mAdapter = new CustomAdapter(values1,values3,values4,values5);
+                    mRecyclerView.setAdapter(mAdapter);
 
-                    customListViewAdapter = new CustomListViewOrders(mcontext,titleList);
+                    /*customListViewAdapter = new CustomListViewOrders(mcontext,titleList);
 
                     listView.setAdapter(customListViewAdapter);
 
@@ -286,12 +305,16 @@ private static List<IMAGE2> list;
                         }
                     });
                     //--------------------------------------------
+                */
                 }
+
             else
                 if(getArguments().getInt(ARG_SECTION_NUMBER)==2)
                 {
                     Context mcontext=this.getContext();
                     final ListView listView;
+                    mRecyclerView=(RecyclerView)rootView.findViewById(R.id.recyclerView);
+                    mRecyclerView.setVisibility(View.GONE);
                     CustomListViewOrders customListViewAdapter;
 
                     ArrayList<HashMap<String, String>> titleList = new ArrayList<>();
@@ -338,10 +361,6 @@ private static List<IMAGE2> list;
         }
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {

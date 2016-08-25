@@ -13,6 +13,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
 import android.view.LayoutInflater;
@@ -45,6 +46,7 @@ private static List<IMAGE2> list;
     private static List<IMAGE> listy;
     static SimpleDateFormat dateformat ;
    static Calendar c;
+    static RecyclerView mRecyclerView;
  static    ArrayList<HashMap<String, String>> titleList;
    static CustomListViewOrders customListViewAdapter;
     final Activity act=this;
@@ -208,7 +210,8 @@ private static List<IMAGE2> list;
                 {
                     final Context mcontext=this.getContext();
                    final  ListView listView;
-
+                    mRecyclerView=(RecyclerView)rootView.findViewById(R.id.recyclerView);
+                    mRecyclerView.setVisibility(View.GONE);
 
                      titleList = new ArrayList<>();
                     valuefind();
@@ -301,7 +304,8 @@ private static List<IMAGE2> list;
                     final Context mcontext=this.getContext();
                     final ListView listView;
 
-
+                    mRecyclerView=(RecyclerView)rootView.findViewById(R.id.recyclerView);
+                    mRecyclerView.setVisibility(View.GONE);
                      titleList = new ArrayList<>();
                     valuefind2();
 

@@ -13,7 +13,8 @@ import com.activeandroid.annotation.Table;
 public class IMAGE2 extends Model {
     @Column(name="date")
     public  String date;
-
+    @Column(name="time")
+    public String time;
       @Column(name="stored")
       public  int stored;
 

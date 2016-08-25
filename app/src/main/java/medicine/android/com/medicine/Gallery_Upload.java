@@ -10,12 +10,14 @@ import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class Gallery_Upload extends AppCompatActivity {
     private int PICK_IMAGE_REQUEST = 1;
@@ -38,8 +40,15 @@ public class Gallery_Upload extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Here I am ",Toast.LENGTH_LONG).show();
                 IMAGE2 ob= new IMAGE2();
+
+                dateformat = new SimpleDateFormat("MM.dd.yyyy", Locale.getDefault());
+                c= Calendar.getInstance(TimeZone.getDefault());
+
                 ob.date=dateformat.format(c.getTime()).toUpperCase();
+                dateformat= new SimpleDateFormat("HH:mm:ss a",Locale.getDefault());
+                ob.time=dateformat.format(c.getTime());
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
                 byte[] byteArray = byteArrayOutputStream .toByteArray();
@@ -62,7 +71,7 @@ public class Gallery_Upload extends AppCompatActivity {
                 bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
                 //Setting the Bitmap to ImageView
                 dateformat = new SimpleDateFormat("MM.dd.yyyy", Locale.getDefault());
-                c= Calendar.getInstance();
+
                 button.setEnabled(true);
                 imageView.setImageBitmap(bitmap);
             } catch (IOException e) {

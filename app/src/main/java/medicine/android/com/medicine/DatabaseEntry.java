@@ -4,6 +4,11 @@ import android.net.Uri;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+
 /**
  * Created by Anurag145 on 8/25/2016.
  */
@@ -11,18 +16,17 @@ import com.google.firebase.database.IgnoreExtraProperties;
 public class DatabaseEntry
 {
 
-        public String username;
-        public String email;
-        public Uri Url;
+
+       public  Map<String,Object> order;
 
         public DatabaseEntry() {
             // Default constructor required for calls to DataSnapshot.getValue(User.class)
         }
 
-        public DatabaseEntry(String username, String email,Uri Url) {
-            this.username = username;
-            this.email = email;
-            this.Url=Url;
+        public DatabaseEntry( Map<String ,Object> order) {
+
+            this.order=order;
+
         }
 
 

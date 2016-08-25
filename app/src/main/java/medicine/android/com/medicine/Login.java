@@ -131,7 +131,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                     Log.d("HEllo", "onAuthStateChanged:signed_in:" + user.getUid());
                     if(intenty==null) {
 
-
+                        User.getSingleton().uid=user.getUid();
                         User.getSingleton().email=user.getEmail();
                         User.getSingleton().name=user.getDisplayName();
                         User.getSingleton().photo=user.getPhotoUrl();

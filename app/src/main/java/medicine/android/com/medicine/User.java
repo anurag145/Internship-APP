@@ -10,7 +10,7 @@ public class User {
     public static User getSingleton() {
         return singleton;
     }
-
+    static String uid;
     static String name;
     static String email;
     static Uri photo;

@@ -29,6 +29,8 @@ import android.widget.TextView;
 import com.activeandroid.query.Delete;
 import com.activeandroid.query.Select;
 import com.activeandroid.query.Update;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -36,6 +38,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class Cart extends AppCompatActivity {
 private static List<IMAGE2> list;
@@ -259,6 +262,16 @@ private static List<IMAGE2> list;
                             button2.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
+                                    Map<String,Object> order= new HashMap<String, Object>();
+                                    order.put("Date",list.get(position).date);
+                                    order.put("Image",list.get(position).image);
+                                    order.put("Time",list.get(position).time);
+                                    order.put("value",1);
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                    DatabaseReference myRef = database.getReference("me");
+
+                                    DatabaseEntry ob = new DatabaseEntry(order);
+                                    myRef.child("Users").child(User.getSingleton().uid).child(User.getSingleton().name).child(list.get(position).time).setValue(ob);
                                     new Update(IMAGE2.class).set("stored=?",2).where("image=?",list.get(position).image).execute();
                                     valuefind();
                                     titleList = new ArrayList<>();
@@ -339,6 +352,16 @@ private static List<IMAGE2> list;
                             button2.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
+                                    Map<String,Object> order= new HashMap<String, Object>();
+                                    order.put("Date",listy.get(position).date);
+                                    order.put("Image",listy.get(position).list);
+                                    order.put("Time",listy.get(position).time);
+                                    order.put("value",2);
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                    DatabaseReference myRef = database.getReference("me");
+
+                                    DatabaseEntry ob = new DatabaseEntry(order);
+                                    myRef.child("Users").child(User.getSingleton().uid).child(User.getSingleton().name).child(listy.get(position).time).setValue(ob);
                                     new Update(IMAGE.class).set("stored=?",2).where("list=?",listy.get(position).list).execute();
                                     valuefind2();
                                     titleList = new ArrayList<>();

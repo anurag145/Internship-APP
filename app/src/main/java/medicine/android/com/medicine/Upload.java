@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.util.Base64;
 import android.view.View;
 
@@ -16,7 +17,9 @@ import android.widget.Toast;
 import java.io.ByteArrayOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class Upload extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -47,7 +50,12 @@ public class Upload extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 IMAGE2 ob= new IMAGE2();
+                dateformat = new SimpleDateFormat("MM.dd.yyyy", Locale.getDefault());
+                c= Calendar.getInstance(TimeZone.getDefault());
+
                 ob.date=dateformat.format(c.getTime()).toUpperCase();
+                dateformat= new SimpleDateFormat("HH:mm:ss a",Locale.getDefault());
+                ob.time=dateformat.format(c.getTime());
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 photo.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
                 byte[] byteArray = byteArrayOutputStream .toByteArray();
@@ -77,8 +85,7 @@ public class Upload extends AppCompatActivity {
         if(requestCode==REQUEST_IMAGE_CAPTURE&&resultCode==RESULT_OK){
             Bundle bundle=data.getExtras();
             photo=(Bitmap)bundle.get("data");
-            dateformat = new SimpleDateFormat("MM.dd.yyyy", Locale.getDefault());
-            c= Calendar.getInstance();
+
             imageView.setEnabled(true);
             imageView2.setImageBitmap(photo);
 

@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 
-import android.support.annotation.NonNull;
+
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.ToolbarWidgetWrapper;
+
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,28 +17,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import android.widget.ImageButton;
 import android.widget.ImageView;
-
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.activeandroid.query.Select;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.facebook.login.LoginManager;
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInApi;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.List;
+
 
 
 public class MainActivity extends AppCompatActivity
@@ -69,6 +56,7 @@ private Intent intent;
         cardView = (CardView)findViewById(R.id.cardview);
         cardView2 = (CardView) findViewById(R.id.cardview2);
        textView=(TextView)findViewById(R.id.textView7) ;
+
         cardView.setOnClickListener(this);
         cardView2.setOnClickListener(this) ;
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -95,18 +83,12 @@ private Intent intent;
         profilePhoto.setImageUrl(User.photo.toString(), imageLoader);
         navigationView.setNavigationItemSelectedListener(this);
         if(LOC.send().equalsIgnoreCase("Your Location should appear here."))
-        {FirebaseDatabase database = FirebaseDatabase.getInstance();
-            DatabaseReference myRef = database.getReference("messagesex");
-            DatabaseEntry ob = new DatabaseEntry(User.getSingleton().name,User.getSingleton().email,User.getSingleton().photo)
-            myRef.setValue(ob);
+        {
             intent = new Intent(this, GetLocation.class);
             startActivityForResult(intent, location);
         }else {
             textView.setText(LOC.send());
-            FirebaseDatabase database = FirebaseDatabase.getInstance();
-            DatabaseReference myRef = database.getReference("messagesex");
-            myRef.setValue(new User());
-            intent = new Intent(this, GetLocation.class);
+
         }
     }
 

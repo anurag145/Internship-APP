@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class ListDown extends AppCompatActivity {
 
@@ -59,10 +60,16 @@ public class ListDown extends AppCompatActivity {
                @Override
                public void onClick(View v) {
                    if (!e2.getText().toString().equalsIgnoreCase(""))
-                   {  dateformat = new SimpleDateFormat("MM.dd.yyyy", Locale.getDefault());
-                       c= Calendar.getInstance();
+                   {
+
                        IMAGE ob = new IMAGE();
+
+                       dateformat = new SimpleDateFormat("MM.dd.yyyy", Locale.getDefault());
+                       c= Calendar.getInstance(TimeZone.getDefault());
+
                        ob.date=dateformat.format(c.getTime()).toUpperCase();
+                       dateformat= new SimpleDateFormat("HH:mm:ss a",Locale.getDefault());
+                       ob.time=dateformat.format(c.getTime());
                        ob.list=e2.getText().toString();
                        ob.stored=1;
                        ob.save();

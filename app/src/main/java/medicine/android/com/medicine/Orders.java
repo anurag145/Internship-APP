@@ -279,7 +279,7 @@ private static List<IMAGE2> list;
                     mCurrentLayoutManagerType = LayoutManagerType.GRID_LAYOUT_MANAGER;
                     mRecyclerView.setLayoutManager(mLayoutManager);
                     mRecyclerView.scrollToPosition(scrollPosition);
-                    mAdapter = new CustomAdapter(values1,values3,values4,values5);
+                    mAdapter = new CustomAdapter(values1,values3,values4,values5,getActivity());
                     mRecyclerView.setAdapter(mAdapter);
 
                     /*customListViewAdapter = new CustomListViewOrders(mcontext,titleList);

@@ -49,7 +49,7 @@ public class ListDown extends AppCompatActivity {
               if(S.equalsIgnoreCase(""))
                 S=S+string;
                 else
-              S=S+","+string;
+              S=S+"\n"+string;
                 e1.setText("");
                 e2.setText(S);
                 checkout.putString("listdown",S);
